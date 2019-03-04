@@ -1,6 +1,6 @@
 require('minitest/autorun')
 require('minitest/rg')
-require_relative('../class_lab')
+require_relative('../library')
 
 class TestLibrary < Minitest::Test
   def test_check_book

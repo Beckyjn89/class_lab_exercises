@@ -1,6 +1,6 @@
 require('minitest/autorun')
 require('minitest/rg')
-require_relative('../class_lab')
+require_relative('../sports_team')
 
 class TestSportsTeam < Minitest::Test
   def test_get_team_name

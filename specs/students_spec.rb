@@ -1,6 +1,6 @@
 require('minitest/autorun')
 require('minitest/rg')
-require_relative('../class_lab')
+require_relative('../student')
 
 class TestCodeclanStudent < Minitest::Test
   student = Student.new("Stephen", "E28")
