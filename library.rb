@@ -7,8 +7,24 @@ class Library
 
   def get_book_details(title)
     for book in @all_books
+      return book if book[:title] == title
+    end
+  end
+
+  def get_rental_details(title)
+    for book in @all_books
+      return book[:rental_details] if book[:title] == title
+    end
+  end
+
+  def add_new_book(title)
+    @all_books << {title: title, rental_details: {student_name: "", date: ""}}
+  end
+
+  def change_rental_details(title, lendee, date)
+    for book in @all_books
       if book[:title] == title
-        return book
+        book[:rental_details] = {student_name: lendee, date: date}
       end
     end
   end
