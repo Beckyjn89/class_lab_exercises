@@ -5,6 +5,11 @@ class Library
     @all_books = [] << book_details
   end
 
+  ##alternative way to initialize - tells it to look for books or empty array if no books are there
+  # def initialize(books = [])
+  #  @books = all_books
+  # end
+
   def get_book_details(title)
     for book in @all_books
       return book if book[:title] == title

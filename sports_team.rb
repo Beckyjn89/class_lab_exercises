@@ -13,7 +13,7 @@ class Team
   end
 
   def check_player(name)
-    @players.include?(name)
+    return @players.include?(name)
   end
 
   def outcome(result)

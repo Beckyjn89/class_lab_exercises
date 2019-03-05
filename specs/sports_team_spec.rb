@@ -16,8 +16,10 @@ class TestSportsTeam < Minitest::Test
 
   def test_add_new_player
     sports_team = Team.new("Wildcats", ["Bob", "Fred"], "Davey")
+    assert_equal(2, sports_team.players.length)
     sports_team.add_new_player("Harold")
     assert_equal(3, sports_team.players.length)
+    ## or can check new array to see if the new player is in there
   end
   def test_does_player_exist
     sports_team = Team.new("Wildcats", ["Bob", "Fred"], "Davey")
@@ -25,6 +27,7 @@ class TestSportsTeam < Minitest::Test
   end
   def test_won_or_lost
     sports_team = Team.new("Wildcats", ["Bob", "Fred"], "Davey")
+    assert_equal(0, sports_team.points)
     sports_team.outcome("win")
     assert_equal(3, sports_team.points)
   end
